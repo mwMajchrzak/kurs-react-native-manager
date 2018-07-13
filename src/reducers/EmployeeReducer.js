@@ -9,7 +9,7 @@ export default (state = INITIAL_STATE, action) => {
         case EMPLOYEES_FETCH_SUCCESS:
             console.log('EMPLOYEES_FETCH_SUCCESS - state', state);
             console.log('EMPLOYEES_FETCH_SUCCESS - action.payload', action.payload)
-            return action.payload
+            return action.payload;
             
         default:
             return state;

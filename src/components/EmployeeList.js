@@ -25,12 +25,13 @@ class EmployeeList extends Component {
     }
 
     renderRow(employee) {
-        console.log('renderRow');
+    
         return <ListItem employee={employee} />;
+        
     }
-
+    
     render() {
-
+        
         if (!this.props.employees.length) return <Spinner size="large"/>; 
     
         return (
@@ -45,10 +46,11 @@ class EmployeeList extends Component {
 const mapStateToProps = state => {
     const employees = _.map(state.employees, (val, uid) => {
         return { ...val, uid };
-        console.log('state - employees', employees);
+       
     });
-    console.log('state - employeeList', state)
+
     return { employees };
+    
 };
 
 export default connect(mapStateToProps, { employeesFetch })(EmployeeList);
